@@ -10,7 +10,7 @@
     },
   "scripts": {
     "test": "mocha",
-    "start": "export NODE_ENV=production && npm run build && npm run server.js",
+    "start": "node server.js",
     "dev": "export NODE_ENV=dev && nodemon server.js"
   },
   "repository": {
