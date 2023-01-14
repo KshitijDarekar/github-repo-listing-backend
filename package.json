@@ -1,0 +1,30 @@
+{
+  "name": "github-repo-listing-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KshitijDarekar/github-repo-listing-backend.git"
+  },
+  "keywords": [],
+  "author": "Kshitij Darekar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KshitijDarekar/github-repo-listing-backend/issues"
+  },
+  "homepage": "https://github.com/KshitijDarekar/github-repo-listing-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
