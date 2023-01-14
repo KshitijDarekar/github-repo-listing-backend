@@ -26,7 +26,7 @@ const getUserData = async (req, res) => {
     return res.status(200).json(json);
   } catch (error) {
     // If there is an error, send error message in the response
-    return res.status(404).json({"error":error.message});
+    return res.status(404).json({ error: error.message });
   }
 };
 
@@ -45,10 +45,16 @@ const getUserRepositories = async (req, res) => {
       `${URL}${req.query.username}/repos?per_page=${req.query.per_page}&page=${req.query.page}`
     );
     const repositories = await response.json();
+
+    // if github username is incorrect
+    if (repositories.message != null && repositories.message == "Not Found") {
+      throw new Error("Invalid Username");
+    }
+
     // Send repositories in the response
     return res.status(200).json(repositories);
   } catch (error) {
-    return res.status(404).json(error.message);
+    return res.status(error.status || 404).json({ error: error.message });
   }
 };
 
