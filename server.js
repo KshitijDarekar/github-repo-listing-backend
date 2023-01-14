@@ -24,3 +24,5 @@ const ip = process.env.IP || "0.0.0.0";
 app.listen(port, ip, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+export default app;
