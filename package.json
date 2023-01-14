@@ -4,6 +4,10 @@
   "description": "",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "16.13.1",
+    "npm":  "8.1.2"
+    },
   "scripts": {
     "test": "mocha",
     "start": "export NODE_ENV=production && npm run build && npm run server.js",
